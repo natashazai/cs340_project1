@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Staff Management Page (Mockup)</title>
+    <script>
+        function addBook() {
+            alert("This is a mockup: Add Book functionality simulated!");
+        }
+
+        function editBook() {
+            alert("This is a mockup: Edit Book functionality simulated!");
+        }
+
+        function deleteBook() {
+            alert("This is a mockup: Delete Book functionality simulated!");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Staff Management Page</h2>
+        
+        <!-- Book Inventory Management Section -->
+        <h3>Manage Book Inventory</h3>
+        <ul>
+            <li>The Great Gatsby by F. Scott Fitzgerald - <button onclick="editBook()">Edit</button> <button onclick="deleteBook()">Delete</button></li>
+            <li>1984 by George Orwell - <button onclick="editBook()">Edit</button> <button onclick="deleteBook()">Delete</button></li>
+            <li>To Kill a Mockingbird by Harper Lee - <button onclick="editBook()">Edit</button> <button onclick="deleteBook()">Delete</button></li>
+        </ul>
+
+        <!-- Add New Book Section -->
+        <h3>Add a New Book</h3>
+        <form onsubmit="event.preventDefault(); addBook();">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+            <label for="copies">Available Copies:</label>
+            <input type="number" id="copies" name="copies" min="1" required>
+            <button type="submit">Add Book</button>
+        </form>
+
+        <a href="index.html" onclick="localStorage.removeItem('loggedInUser');">Logout</a>
+    </div>
+</body>
+</html>
